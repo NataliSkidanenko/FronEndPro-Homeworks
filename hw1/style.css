@@ -1,0 +1,9 @@
+.heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    font-family: sans-serif;
+    font-size: 52px;
+    color: #7f14dc;
+}
