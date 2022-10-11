@@ -5,7 +5,7 @@ for (let i = 10; i <= 20; i++) {
         range = range + i;
         break;
     }
-    range = range + i + ", ";
+    range = `${range}${i}, `;
 }
 console.log(range);
 
