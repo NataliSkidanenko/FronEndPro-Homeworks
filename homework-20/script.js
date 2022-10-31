@@ -15,11 +15,23 @@ class Person {
         }
         return now.getFullYear() - new Date(this._dateBirth).getFullYear() - 1;
     }
+
+    getInfo() {
+        console.group(`${this.name.firstName} ${this.name.lastName}:`);
+        console.log(`Вік: ${this.age}`);
+        if (this.car !== undefined) {
+            this.car.getInfo.call(this.car);
+        }
+        console.groupEnd();
+    }
+
+    addCar(object) {
+        this.car = object;
+    }
 }
 
 const person = new Person('Inna', 'Petrenko', '1996-10-26');
-console.group('Створюємо нову людину:');
-console.log(person);
+console.log(person.getInfo());
 console.log(`Цій людині ${person.age} років`);
 console.groupEnd();
 
@@ -63,4 +75,6 @@ const personYoung = new Person('Fedir', 'Yakymchuk', '2010-12-03');
 console.log(car.getInfo());
 car.addOwner(personYoung); //Не вдалось присвоїти власника!
 car.addOwner(person);
+person.addCar(car);
+console.log(person.getInfo());
 console.log(car.getInfo());
