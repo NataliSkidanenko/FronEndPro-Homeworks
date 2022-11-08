@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework-24</title>
+    <style>
+        .wrapper {
+            display: grid;
+            place-items: center;
+            height: 90vh;
+        }
+
+        .slider {
+            display: grid;
+            grid-template-columns: 1fr 5fr 1fr;
+            place-items: center;
+        }
+
+        .slider .img {
+            width: 100%;
+        }
+
+        button {
+            height: 2rem;
+            color: rgb(255, 255, 255);
+            background-color: rgb(45, 45, 45);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        button:hover {
+            background-color: rgb(91, 91, 91);
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+       
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="slider">
+            <button class="prev hidden">Prev</button>
+            <img src="./img/nature-1.jpg" alt="nature-1" class = "img">
+            <button class="next">Next</button>
+        </div>
+    </div>
+
+    <script src="./slider.js"></script>
+</body>
+
+</html>
