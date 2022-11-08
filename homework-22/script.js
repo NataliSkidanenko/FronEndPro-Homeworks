@@ -8,7 +8,7 @@ function createTable(rowsNumber, columnsNumber) {
 
         for (let j = 0; j < columnsNumber; j++) {
             const cell = row.insertCell();
-            cell.innerHTML = `Cell ${++counter}`;
+            cell.innerText = `Cell ${++counter}`;
         }
     }
     return table;
