@@ -53,38 +53,3 @@ function validateList(list) {
     }
     return true;
 }
-
-// function generateList(list) {
-//     if (validateList(list)) {
-//         const listInHtml = document.querySelectorAll('.list');
-//         const lastList = listInHtml[listInHtml.length - 1];
-
-//         for (let i = 0; i < list.length; i++) {
-//             if (!Array.isArray(list[i])) {
-//                 if (depth === 1) {
-//                     lastList.insertAdjacentHTML('beforeend', `<li>${list[i]}</li>`);
-//                 } else {
-//                     lastList.insertAdjacentHTML(
-//                         'beforeend',
-//                         `<li>${index.join('.')}.${list[i]}</li>`
-//                     );
-//                 }
-//                 if (Array.isArray(list[i + 1])) {
-//                     index.push(list[i]);
-//                 }
-//             }
-
-//             if (Array.isArray(list[i])) {
-//                 depth = depth + 1;
-//                 lastList.insertAdjacentHTML('beforeend', `<ul class = "list"></ul>`);
-//                 generateList(list[i]);
-//             }
-
-//             if (i === list.length - 1) {
-//                 depth = depth - 1;
-//                 index.splice(index.length - 1, 1);
-//             }
-//         }
-//     }
-// }
-// const newList = document.createElement('ul');
