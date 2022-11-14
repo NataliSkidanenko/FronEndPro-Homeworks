@@ -8,7 +8,7 @@ function goToPage() {
     const https = 'https://';
 
     if (url.startsWith('https://') || url.startsWith('http://')) {
-        document.location.assign(`${url}`);
+        document.location.assign(url);
     } else {
         document.location.assign(`${https}${url}`);
     }
