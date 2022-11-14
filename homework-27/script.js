@@ -4,7 +4,12 @@ const button = document.querySelector('.form--url button');
 button.addEventListener('click', goToPage);
 
 function goToPage() {
-    const url = input.value.replace(/http(s):\/\//i, '');
+    const url = input.value;
     const https = 'https://';
-    document.location.assign(`${https}${url}`);
+
+    if (url.startsWith('https://') || url.startsWith('http://')) {
+        document.location.assign(`${url}`);
+    } else {
+        document.location.assign(`${https}${url}`);
+    }
 }
