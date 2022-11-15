@@ -135,6 +135,7 @@ const infoBlock = document.querySelector('#info');
 const descriptionBlock = document.querySelector('#description');
 const buttonBuy = document.querySelector('#buy-button');
 const messageBuy = document.createElement('div');
+messageBuy.classList.add('message');
 messageBuy.innerText = 'The product has been added the basket';
 
 categories.forEach((element) => {
@@ -147,6 +148,7 @@ categories.forEach((element) => {
 categoriesBlock.addEventListener('click', (ev) => {
     if (ev.target.nodeName === 'LI') {
         infoBlock.classList.add('invisible');
+        productsBlock.classList.remove('invisible');
         productsBlock.innerHTML = '';
         products.forEach((element) => {
             if (element.category_id === Number(ev.target.dataset.categoryId)) {
@@ -163,7 +165,6 @@ productsBlock.addEventListener('click', (ev) => {
     if (ev.target.nodeName === 'LI') {
         descriptionBlock.innerHTML = '';
         infoBlock.classList.remove('invisible');
-        messageBuy.remove();
         products.forEach((element) => {
             if (element.id === Number(ev.target.dataset.productId)) {
                 descriptionBlock.innerHTML = element.description;
@@ -173,5 +174,10 @@ productsBlock.addEventListener('click', (ev) => {
 });
 
 buttonBuy.addEventListener('click', () => {
-    infoBlock.appendChild(messageBuy);
+    container.appendChild(messageBuy);
+    setTimeout(() => {
+        messageBuy.remove();
+    }, 2000);
+    infoBlock.classList.add('invisible');
+    productsBlock.classList.add('invisible');
 });

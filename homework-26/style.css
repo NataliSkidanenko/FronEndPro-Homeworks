@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    position: relative;
     font-family: sans-serif;
     font-size: 1rem;
     line-height: 1.2;
@@ -84,3 +85,25 @@ li {
     border-radius: 8px;
     cursor: pointer;
 }
+
+.message {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    font-size: 1.5rem;
+    padding: 5%;
+    background-color: rgb(226, 209, 255);
+    border-radius: 8px;
+    animation: blink 2s ease-in-out 1;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+  }
