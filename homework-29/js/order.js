@@ -6,7 +6,7 @@ postInput.addEventListener('blur', validatePost);
 form.addEventListener('submit', submitForm);
 
 function validateName() {
-    const regExp = /^[A-ZА-ЯІЇ\s]+$/i;
+    const regExp = /^[A-ZА-ЯІЇ\s-]+$/i;
     const name = nameInput.value.trim();
 
     if (nameInput.nextElementSibling) {
@@ -19,7 +19,10 @@ function validateName() {
     }
 
     if (name && !regExp.test(name)) {
-        nameInput.insertAdjacentHTML('afterend', '<p>Use only Latin letters</p>');
+        nameInput.insertAdjacentHTML(
+            'afterend',
+            '<p>Use only Latin or Cyrillic letters(and "-")</p>'
+        );
         return false;
     }
 
