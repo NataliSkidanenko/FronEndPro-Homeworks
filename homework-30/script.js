@@ -1,7 +1,7 @@
 const form = document.forms.registration;
 form.name.addEventListener('blur', validateName);
 form.date.max = `${new Date().toISOString().split('T')[0]}`;
-form.button.addEventListener('click', saveAndShow);
+form.addEventListener('submit', saveAndShow);
 
 function validateName() {
     const regExp = /^[A-ZА-ЯІЇ\s-]+$/i;
