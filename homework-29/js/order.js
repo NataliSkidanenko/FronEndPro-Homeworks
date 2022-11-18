@@ -1,4 +1,3 @@
-const form = document.forms.order;
 const nameInput = form.name;
 const postInput = form.postOffice;
 
