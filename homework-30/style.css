@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+}
+
+body {
+    position: relative;
+    font-family: sans-serif;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-color: rgb(0, 44, 105);
+}
+
+p {
+    margin: 0;
+}
+
+.none-display {
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.form {
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.form input[type="text"], .form input[type="date"] {
+    padding: 5px;
+    min-width: 50%;
+}
+
+.form .error {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: rgb(176, 0, 0);
+}
+
+.form fieldset div {
+    display: inline-block;
+}
+
+.form__title {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form__label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form__label, .form fieldset {
+    margin-top: 20px;
+}
+
+.form textarea {
+    width: 100%;
+}
+
+.form__footer {
+    padding: 30px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__button {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(7, 67, 150);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form__button:hover {
+    background-color: rgb(0, 51, 122);
+}
+
+#info, tr, td {
+    border: 1px solid rgb(102, 102, 102);
+    border-collapse: collapse;
+}
+
+#info td {
+    padding: 15px;
+}
