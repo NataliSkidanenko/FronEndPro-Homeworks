@@ -32,12 +32,13 @@ function validateName() {
 function saveAndShow(ev) {
     ev.preventDefault();
     if (validateName()) {
-        const info = {};
-        info.name = form.name.value.trim();
-        info.date = form.date.value;
-        info.sex = form.sex.value;
-        info.adress = form.adress.value;
-        info.languages = getAllCheckBoxes('registration', 'language');
+        const info = {
+        name: form.name.value.trim(),
+        date: form.date.value,
+        sex: form.sex.value,
+        adress: form.adress.value,
+        languages: getAllCheckBoxes('registration', 'language')
+   };
 
         form.classList.add('none-display');
         createTable(info);
