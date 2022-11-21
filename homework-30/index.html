@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Homework-30</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="form">
+                <p class="form__title">
+                    Дані для реєстрації
+                </p>
+                <form action="#" id="registration" class="form__body">
+                    <div>
+                        <label for="name" class="form__label">Ім'я та прізвище</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    
+                    <div>
+                        <label for="date" class="form__label">Дата народження</label>
+                        <input type="date"  value="2000-01-01" min="1910-01-01" id="date">
+                    </div>
+
+                    <fieldset>
+                        <legend>Стать</legend>
+                        <div>
+                            <input type="radio" name="sex" id="female" value="Жіноча" checked>
+                            <label for="female">Жіноча</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sex" id="male" value="Чоловіча">
+                            <label for="male">Чоловіча</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="sex" id="not-pecified" value="Не вказувано">
+                            <label for="not-pecified">Не вказувати</label>
+                        </div>
+                    </fieldset>
+                        
+                    
+
+                    <div>
+                        <label for="adress" class="form__label">Адреса</label>
+                        <textarea name="adress" id="adress" rows="5"></textarea>
+                    </div>
+
+                    <fieldset>
+                        <legend>Мови, якими володієте</legend>
+                        <div>
+                            <input class="language" type="checkbox" name="ua" id="ua" value="Українська" checked>
+                            <label for="ua">Українська</label>
+                        </div>
+                        <div>
+                            <input class="language"  type="checkbox" name="eng" id="eng" value="Англійська">
+                            <label for="eng">Англійська</label>
+                        </div>
+                        <div>
+                            <input class="language"  type="checkbox" name="it" id="it" value="Італійська">
+                            <label for="it">Італійська</label>
+                        </div>
+                        <div>
+                            <input class="language"  type="checkbox" name="fr" id="fr" value="Французька">
+                            <label for="fr">Французька</label>
+                        </div>
+                    </fieldset>
+                    
+                    <div class="form__footer">
+                        <button type="submit" class="form__button" name="button">Зберегти</button>
+                    </div>
+                </form>
+                <table id="info">
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
