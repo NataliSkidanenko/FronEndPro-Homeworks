@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Homework-26</title>
+</head>
+
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="container" id="catalog">
+            <ul class ="categories" id="categories"></ul>
+            <ul class ="products" id="products"></ul>
+            <div class="info invisible" id="info">
+                <div id="description"></div> 
+                <a href="#popup" id="buy-button" class="button">Buy</a>
+            </div>
+        </div>
+
+        <div class="container none-display" id="orders">
+            <ul class ="orders-list" id="orders-list"></ul>
+            <div id="order-info" class="invisible"></div>
+            <div id="product-info" class="invisible"></div>
+        </div>
+        <p id="orders-error" class="error invisible">You have no orders yet</p>
+        <button id="orders-button">My orders</button>
+        <button id="catalog-button" class="none-display">Return to the catalog</button>
+    </div>
+
+    <div id="popup" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#wrapper" class="popup__close">
+                    Close
+                </a>
+
+                <p class="popup__title">Make an order</p>
+                    <form name="order" action="#" class="order">
+                        <div class="order__info">
+                            <p class="order__product" id="product-name">Choose a product</p>
+                            <p class="order__price" id="product-price">--</p>
+                            <input type="number" name="number" id="number" value="1"> 
+                        </div>
+                        <div>
+                            <label for="name">Your name and surname</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+
+                        <div>
+                            <label for="city">City</label>
+                            <select name="city" id="city">
+                                <option value="Kyiv">Kyiv</option>
+                                <option value="Kharkiv">Kharkiv</option>
+                                <option value="Odesa">Odesa</option>
+                                <option value="Poltava">Poltava</option>
+                                <option value="Lviv">Lviv</option>
+                                <option value="Ternopil">Ternopil</option>
+                                <option value="Zhytomyr">Zhytomyr</option>
+                                <option value="Vinnytsya">Vinnytsya</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="postOffice">Post office №</label>
+                            <input type="text" name="postOffice" id="postOffice">
+                        </div>
+                       
+                        <div>
+                            <input type="radio" name="payment" id="paymentCash" value="Cash on delivery" checked>
+                            <label for="paymentCash">Cash on delivery</label>
+                            <input type="radio" name="payment" id="paymentCard" value="Bank card">
+                            <label for="paymentCard">Bank card</label>
+                        </div>
+
+                        <div class="order__footer">
+                            <button type="submit">Submit</button>
+                        </div>
+                    </form>
+
+                    <div id="about-order"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/catalog.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/orders-history.js"></script>
+
+</body>
+
+</html>
