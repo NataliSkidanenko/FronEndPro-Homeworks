@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Homework-32</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <form name="showPost">
+                <div>
+                  <label for="id-post">Enter post ID:</label>
+                  <input name="idPost" id="id-post" required>
+                  <p class="error"></p>
+                </div>
+                  
+                <button class="button-post" id="button-show-post">Show post</button><br>
+                <button class="button-comments" id="button-show-comments">Show comment</button>
+            </form>
+        </div>
+        <div class="container">
+            <div class="post"></div>
+        </div>
+        <div class="container">
+            <div class="comments"></div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
