@@ -1,0 +1,24 @@
+.sidebar {
+    grid-area: sidebar;
+    padding: 60px 60px;
+    min-height: 80vh;
+    background-color: rgb(223 246 255);
+}
+
+.title {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+a {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+a:hover {
+    color: rgba(255, 255, 255, 0.729);
+}
+
+li {
+    margin-top: 10px;
+}
