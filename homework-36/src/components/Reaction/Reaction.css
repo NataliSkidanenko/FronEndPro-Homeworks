@@ -1,0 +1,15 @@
+.reaction {
+    text-align: center;
+    margin: 0 5%;
+}
+
+button {
+    padding: 15px;
+    font-size: 30px;
+    background-color: rgb(239, 239, 239);
+    border-radius: 8px;
+}
+
+p {
+    margin-top: 15px;
+}
